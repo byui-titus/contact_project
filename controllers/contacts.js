@@ -4,8 +4,8 @@ const mongodb = require('../data/database');
 
  const getAll = async (req, res) => {
     const result = await mongodb.getDatabase().db().collection('contacts').find();
-    result.toArray().than((contacts) => {
-        res.setHeader('content-Type', 'application/json');
+    result.toArray().then((contacts) => {
+        res.setHeader('Content-Type', 'application/json');
         res.status(200).json(contacts);
     });
 
@@ -14,12 +14,12 @@ const mongodb = require('../data/database');
  const getSingle = async (req, res) => {
     const result = await mongodb.getDatabase().db().collection('contacts').find({_id: contactId});
     result.toArray().then((contacts) =>{
-        res.setHeader('cotent-type', 'applicatioon/json');
+        res.setHeader('Cotent-Type', 'applicatioon/json');
         res.staus(200).json(contacts[0]);
     });
  }
 
  module.exports = {
-  initDb,
-  getDatabase,
+  getAll,
+  getSingle,
 };
