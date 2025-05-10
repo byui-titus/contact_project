@@ -1,0 +1,13 @@
+                       ###  LOCAL HOST
+##ALL CONTACTS
+http://localhost:3000/contactS/
+
+
+### SINGLE CONTACT BY ID
+http://localhost:3000/contactS/
+
+                         #### ROUTER
+ ##ALL CONTACTS
+
+
+//SINGLE CONTACT BY ID
